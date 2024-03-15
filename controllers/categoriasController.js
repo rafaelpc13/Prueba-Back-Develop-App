@@ -64,15 +64,10 @@ const EditarCategoria = async (req, res) => {
 const ObtenerProductosporCategoria = async (req, res) => {
     try {
         const { id } = req.params;
-        console.log("idd----->",id)
-
         const rows = await connection.query('CALL ObtenerProductosPorCategoria(?)', [id]);
-console.log(rows)
-
         if (rows) {
             return res.json(rows[0]);
         }
-
         return res.json({ message: "obtenidos exitosamente" });
     } catch (error) {
         console.error('Error al editar categoría:', error.message);

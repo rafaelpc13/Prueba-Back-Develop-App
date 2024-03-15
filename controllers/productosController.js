@@ -38,4 +38,4 @@ const AsociarProductoCategoria = async (req, res) => {
 
 
 
-export { InsertarProducto,ObtenerProductos };
+export { InsertarProducto,ObtenerProductos,AsociarProductoCategoria };

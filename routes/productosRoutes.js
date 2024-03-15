@@ -1,12 +1,13 @@
 import express from "express";
 
 const router = express.Router();
-import { InsertarProducto,ObtenerProductos} from "../controllers/productosController.js";
+import { InsertarProducto,ObtenerProductos,AsociarProductoCategoria} from "../controllers/productosController.js";
 
 //Creacion, registro  y confrimacion de usuarios
 
 router.post("/insertar", InsertarProducto);
 router.get("/obtener", ObtenerProductos);
+router.post("/AsignarCategoria", AsociarProductoCategoria);
 
 /* router.post("/insertar", InsertarUsuario);
 
